@@ -18,6 +18,7 @@ namespace JuraganMobil.Model {
         private decimal _driver;
         private decimal _total;
         private static int _count;
+        static decimal _totalIncome;
 
 
         public Suv(string noPolice, string TypeVehicle ,int year, decimal price, decimal taxInYear, int seat, DateOnly transactionDate, decimal rent, decimal driver)
@@ -32,6 +33,7 @@ namespace JuraganMobil.Model {
             _rent = rent;
             _driver = driver;
             _total = _rent + _driver;
+            _totalIncome += _total;
             _count++;
         }
 
@@ -51,6 +53,11 @@ namespace JuraganMobil.Model {
             return _count;
         }
 
+        public static decimal GetTotalSuvIncome()
+        {
+            return _totalIncome;
+        }
+
         public override string ToString()
         {
             return $"No Police         : {NoPolice}\n" +
@@ -62,7 +69,7 @@ namespace JuraganMobil.Model {
                    $"Transaction Date  : {TransactionDate}\n" +
                    $"Rent              : Rp.{Rent}\n" +
                    $"Driver            : Rp.{Driver}\n" +
-                   $"Total             : Rp.{Total}\n";
+                   $"Total              : Rp.{Total}\n";
         }
 
     }

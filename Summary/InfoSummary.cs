@@ -9,6 +9,11 @@ namespace JuraganMobil.Summary
 {
     internal class InfoSummary : IInfoSummary
     {
+        public decimal GetTotalIncomeVehicle()
+        {
+            return Suv.GetTotalSuvIncome();
+        }
+
         public int GetTotalVehicle()
         {
             return Suv.CountSuv() + Taxi.CountTaxi() + PrivateJet.CountPrivateJet();

@@ -9,5 +9,7 @@ namespace JuraganMobil.Summary
     internal interface IInfoSummary
     {
         int GetTotalVehicle();
+
+        decimal GetTotalIncomeVehicle();
     }
 }

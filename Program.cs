@@ -13,7 +13,7 @@ namespace JuraganMobil// Note: actual namespace depends on the project name.
 
             //---------- FIND SUV ALL -----------------
             //var findSuv = repoManager.Suv.FindAllSuv();
-            //foreach (var suv in findSuv)
+            //foreach (var suv in findSuv) ;
             //    Console.WriteLine(suv);
 
             //------------ FIND SUV BY NOPOL ---------------------------
@@ -30,15 +30,23 @@ namespace JuraganMobil// Note: actual namespace depends on the project name.
             //    Console.WriteLine(newSuv);
 
             //------------- FIND ALL PRIVATE JET -----------
-            //var findJet = repoManager.PrivateJet.FindAllJet();
-            //foreach (var jet in findJet)
+            //    var findJet = repoManager.PrivateJet.FindAllJet();
+            //foreach (var jet in findJet) ;
             //    Console.WriteLine(jet);
 
-            //var findAllTaxi = repoManager.Taxi.FindAllTaxi();
-            //foreach (var taxi in findAllTaxi)
+            //    var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            //foreach (var taxi in findAllTaxi);
             //    Console.WriteLine(taxi);
 
-            var CountTotalVehicle = repoManager._iinfoSummary.GetTotalVehicle();
+
+            //----- GET TOTAL VEH
+            var findSuv = repoManager.Suv.FindAllSuv();
+            foreach (var suv in findSuv) ;
+            var findJet = repoManager.PrivateJet.FindAllJet();
+            foreach (var jet in findJet) ;
+            var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            foreach (var taxi in findAllTaxi) ;
+            var CountTotalVehicle = repoManager.Summary.GetTotalIncomeVehicle();
             Console.WriteLine(CountTotalVehicle);
 
         }
