@@ -11,5 +11,9 @@ namespace JuraganMobil.Summary
         int GetTotalVehicle();
 
         decimal GetTotalIncomeVehicle();
+
+        int GetTotalVehicleByType(string type);
+
+        decimal GetTotalIncomeByType(string type);
     }
 }

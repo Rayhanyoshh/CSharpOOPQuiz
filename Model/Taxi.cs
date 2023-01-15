@@ -18,18 +18,20 @@ namespace JuraganMobil.Model
         private decimal _orderPerKM;
         private decimal _total;
         private static int _count;
+        static decimal _totalIncome;
 
-        public Taxi(string noPolice, int year, decimal price, decimal taxInYear, int seat, DateOnly transactionDate, int order, decimal orderPerKM)
+        public Taxi(string noPolice, int year, decimal price, int seat, DateOnly transactionDate, int order, decimal orderPerKM)
         {
             _noPolice = noPolice;
             _year = year;
             _price = price;
-            _taxInYear = taxInYear;
+            _taxInYear = _price * 10 / 100;
             _seat = seat;
             _transactionDate = transactionDate;
             _order = order;
             _orderPerKM = orderPerKM;
             _total = _order * _orderPerKM;
+            _totalIncome += _total;
             _count++;
         }
 
@@ -49,6 +51,12 @@ namespace JuraganMobil.Model
             return _count;
         }
 
+        public static decimal TotalIncomeTaxi()
+        {
+            return _totalIncome;
+        }
+
+
         public override string ToString()
         {
             return
@@ -56,7 +64,7 @@ $"No Police         : {NoPolice}\n" +
 $"Vehicle Type      : Taxi\n" +
 $"Year              : {Year}\n" +
 $"Price             : Rp.{Price}\n" +
-$"Tax(In Year)      : Rp.{TaxInYear}\n" +
+$"Tax(In Year)      : Rp.{_taxInYear}\n" +
 $"Seat              : {Seat}\n" +
 $"Transaction Date  : {TransactionDate}\n" +
 $"Order Distance    : {Order}Km\n" +

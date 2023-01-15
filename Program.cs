@@ -9,7 +9,7 @@ namespace JuraganMobil// Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            var repoManager = new RepositoryManager();
+              var repoManager = new RepositoryManager();
 
             //---------- FIND SUV ALL -----------------
             //var findSuv = repoManager.Suv.FindAllSuv();
@@ -39,15 +39,56 @@ namespace JuraganMobil// Note: actual namespace depends on the project name.
             //    Console.WriteLine(taxi);
 
 
-            //----- GET TOTAL VEH
-            var findSuv = repoManager.Suv.FindAllSuv();
-            foreach (var suv in findSuv) ;
-            var findJet = repoManager.PrivateJet.FindAllJet();
-            foreach (var jet in findJet) ;
-            var findAllTaxi = repoManager.Taxi.FindAllTaxi();
-            foreach (var taxi in findAllTaxi) ;
-            var CountTotalVehicle = repoManager.Summary.GetTotalIncomeVehicle();
-            Console.WriteLine(CountTotalVehicle);
+            //----- GET TOTAL VEHicle ------------------
+            //var findSuv = repoManager.Suv.FindAllSuv();
+            //foreach (var suv in findSuv) ;
+            //var findJet = repoManager.PrivateJet.FindAllJet();
+            //foreach (var jet in findJet) ;
+            //var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            //foreach (var taxi in findAllTaxi) ;
+            //var CountTotalVehicle = repoManager.Summary.GetTotalVehicle();
+            //Console.WriteLine(CountTotalVehicle);
+
+
+            //-------------- GET TOTAL INCOME ALL VEHICLE ----------------
+            //var findSuv = repoManager.Suv.FindAllSuv();
+            //foreach (var suv in findSuv) ;
+            //var findJet = repoManager.PrivateJet.FindAllJet();
+            //foreach (var jet in findJet) ;
+            //var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            //foreach (var taxi in findAllTaxi) ;
+            //var CountIncomeTotalVehicle = repoManager.Summary.GetTotalIncomeVehicle();
+            //Console.WriteLine($"Rp.{CountIncomeTotalVehicle}");
+
+
+
+            //------------- GET TOTAL INCOME BY TYPE -------------------------------
+            //Console.Write("Input Vehicle Type to Check : ");
+            //var inputType = Console.ReadLine();
+            //var findSuv = repoManager.Suv.FindAllSuv();
+            //foreach (var suv in findSuv) ;
+            //var findJet = repoManager.PrivateJet.FindAllJet();
+            //foreach (var jet in findJet) ;
+            //var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            //foreach (var taxi in findAllTaxi) ;
+            //var CountIncomeTotalByType = repoManager.Summary.GetTotalIncomeByType(inputType);
+            //Console.WriteLine($"Rp.{CountIncomeTotalByType}");
+
+
+
+            // ---------------- GET TOTAL VEHICLE BY TYPE ----------------------------
+            //Console.Write("Input Vehicle Type to Check : ");
+            //var inputType = Console.ReadLine();
+            //var findSuv = repoManager.Suv.FindAllSuv();
+            //foreach (var suv in findSuv) ;
+            //var findJet = repoManager.PrivateJet.FindAllJet();
+            //foreach (var jet in findJet) ;
+            //var findAllTaxi = repoManager.Taxi.FindAllTaxi();
+            //foreach (var taxi in findAllTaxi) ;
+            //var CountTotalByType = repoManager.Summary.GetTotalVehicleByType(inputType);
+            //Console.WriteLine($"Rp.{CountTotalByType}");
+
+
 
         }
     }

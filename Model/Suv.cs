@@ -21,13 +21,13 @@ namespace JuraganMobil.Model {
         static decimal _totalIncome;
 
 
-        public Suv(string noPolice, string TypeVehicle ,int year, decimal price, decimal taxInYear, int seat, DateOnly transactionDate, decimal rent, decimal driver)
+        public Suv(string noPolice, string TypeVehicle ,int year, decimal price,int seat, DateOnly transactionDate, decimal rent, decimal driver)
         {
             _noPolice = noPolice;
             _typeVehicle = TypeVehicle;
             _year = year;
             _price = price;
-            _taxInYear = taxInYear;
+            _taxInYear = _price * 10 / 100;
             _seat = seat;
             _transactionDate = transactionDate;
             _rent = rent;
@@ -64,12 +64,12 @@ namespace JuraganMobil.Model {
                    $"Vehicle Type      : SUV\n" +
                    $"Year              : {Year}\n" +
                    $"Price             : Rp.{Price}\n" +
-                   $"Tax(In Year)      : Rp.{TaxInYear}\n" +
+                   $"Tax(In Year)      : Rp.{_taxInYear}\n" +
                    $"Seat              : {Seat}\n" +
                    $"Transaction Date  : {TransactionDate}\n" +
                    $"Rent              : Rp.{Rent}\n" +
                    $"Driver            : Rp.{Driver}\n" +
-                   $"Total              : Rp.{Total}\n";
+                   $"Total             : Rp.{Total}\n";
         }
 
     }

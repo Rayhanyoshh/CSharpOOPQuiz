@@ -15,8 +15,8 @@ namespace JuraganMobil.Repo
         {
             _listJet = new List<PrivateJet>
             {
-                new PrivateJet("ID8089",2015,150_000_000_000,1_500_0000,12,new DateOnly(2023,02,11),35_000_000,15_000_000),
-                new PrivateJet("ID8099",2018,175_000_000_000,1_750_0000,15,new DateOnly(2023,02,12),55_000_000,25_000_000)
+                new PrivateJet("ID8089",2015,150_000_000_000,12,new DateOnly(2023,02,11),35_000_000,15_000_000),
+                new PrivateJet("ID8099",2018,175_000_000_000,15,new DateOnly(2023,02,12),55_000_000,25_000_000)
             };      
         }
 

@@ -18,18 +18,20 @@ namespace JuraganMobil.Model
         private decimal _driver;
         private decimal _total;
         private static int _count;
+        static decimal _totalIncome;
 
-        public PrivateJet(string noPolice,int year, decimal price, decimal taxInYear, int seat, DateOnly transactionDate, decimal rent, decimal driver)
+        public PrivateJet(string noPolice,int year, decimal price,int seat, DateOnly transactionDate, decimal rent, decimal driver)
         {
             _noPolice = noPolice;
             _year = year;
             _price = price;
-            _taxInYear = taxInYear;
+            _taxInYear = _price * 10 / 100;
             _seat = seat;
             _transactionDate = transactionDate;
             _rent = rent;
             _driver = driver;
             _total = _rent + _driver;
+            _totalIncome += _total;
             _count++;
         }
 
@@ -49,13 +51,18 @@ namespace JuraganMobil.Model
             return _count;
         }
 
+        public static decimal TotalIncomePrivateJet()
+        {
+            return _totalIncome;
+        }
+
         public override string ToString()
         {
             return
 $"No Register       : {NoPolice}\n" +
 $"Vehicle Type      : Private Jet\n" +
 $"Year              : {Year}\n" +
-$"Tax(In Year)      : {TaxInYear}\n" +
+$"Tax(In Year)      : {_taxInYear}\n" +
 $"Seat              : {Seat}\n" +
 $"Transaction Date  : {TransactionDate}\n" +
 $"Rent              : {Rent}\n" +
